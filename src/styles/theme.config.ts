@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const lightTheme = {
+export const theme = {
   gray100: '#E5E5E5',
   primary: '#0F52BA',
 }
