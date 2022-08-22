@@ -16,5 +16,6 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Montserrat', sans-serif;
+    background-color: ${theme.gray100};
   }
 `;

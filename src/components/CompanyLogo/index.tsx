@@ -4,7 +4,7 @@ export function CompanyLogo() {
   return (
     <LogoContainer>
       <span>MKS</span>
-      <span>Sistema</span>
+      <span>Sistemas</span>
     </LogoContainer>
   );
 }

@@ -5,7 +5,7 @@ export const ProductContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${(props) => props.theme.white};
-  margin: 0 10px 10px;
+  margin: 10px;
   border-radius: 8px;
   width: 217px;
 `;
