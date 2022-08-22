@@ -1,9 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const theme = {
-  gray100: '#E5E5E5',
-  primary: '#0F52BA',
-}
+  white: "#FFFFFF",
+  gray100: "#E5E5E5",
+  black: '#000000',
+  primary: "#0F52BA",
+};
 
 export const GlobalStyles = createGlobalStyle`
    * {

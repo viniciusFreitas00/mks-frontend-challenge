@@ -10,8 +10,9 @@ export const CartButtonContainer = styled.button`
   border: 0;
 
   :hover {
-    filter: brightness(0.7);
+    filter: brightness(0.8);
     cursor: pointer;
+    transition: filter 0.2s;
   }
 
   span:last-child {
