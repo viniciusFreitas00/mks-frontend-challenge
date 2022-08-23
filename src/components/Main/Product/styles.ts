@@ -8,6 +8,7 @@ export const ProductContainer = styled.div`
   margin: 10px;
   border-radius: 8px;
   width: 217px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
 `;
 
 export const ProductsInfoContent = styled.div`
