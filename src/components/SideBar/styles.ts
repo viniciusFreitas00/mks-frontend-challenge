@@ -1,16 +1,37 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  background: ${(props) => props.theme.primary};
-  box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
+interface ContainerProps {
+  isVisible: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
   right: 0;
   top: 0;
   width: 486px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+  z-index: 10;
+
+  background: ${(props) => props.theme.primary};
+  box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
+
+  transform: ${(props) =>
+    props.isVisible ? "translateX(0)" : "translateX(100%)"};
+
+  transition: transform 0.5s;
+`;
+
+export const Overlay = styled.div`
+  background-color: red;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 `;
 
 export const Header = styled.div`
