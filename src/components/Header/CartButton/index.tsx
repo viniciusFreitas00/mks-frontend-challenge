@@ -1,25 +1,23 @@
 import Image from "next/image";
 import { CartButtonContainer } from "./styles";
 
-import { useAppDispatch } from "../../../store/hooks";
-import { showSideBar } from "../../../store/cartSideBar/cartSideBarSlice";
+interface CartButtonProps {
+  qtdProducts: number;
+  handleClick: () => void;
+}
 
-export function CartButton() {
-  const dispatch = useAppDispatch();
+export function CartButton({ qtdProducts, handleClick }: CartButtonProps) {
 
-  function handleOpenSideBar() {
-    dispatch(showSideBar());
-  }
 
   return (
-    <CartButtonContainer onClick={handleOpenSideBar}>
+    <CartButtonContainer onClick={handleClick}>
       <Image
         src="/images/cartIcon.svg"
         alt="carrinho de compras"
         height={18}
         width={19}
       />
-      <span>0</span>
+      <span>{qtdProducts}</span>
     </CartButtonContainer>
   );
 }

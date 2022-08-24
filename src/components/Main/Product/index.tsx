@@ -1,20 +1,29 @@
 import Image from "next/image";
 
+import { useAppDispatch } from "../../../store/hooks";
+import { addProduct } from "../../../store/cart/cartSlice";
+
 import { BuyButton, ProductContainer, ProductsInfoContent } from "./styles";
 
 interface ProductProps {
+  id: number;
   photo: string;
   name: string;
   description: string;
   price: number;
 }
 
-export function Product({ photo, name, price, description }: ProductProps) {
-
+export function Product({ id, photo, name, price, description }: ProductProps) {
+  const dispatch = useAppDispatch();
   const formattedPrice = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
   }).format(price);
+
+  function hadleAddProduct() {
+    dispatch(addProduct({ id, photo, name, price }));
+  }
+
   return (
     <ProductContainer>
       <Image src={photo} alt="imagem do produto" width={138} height={138} />
@@ -35,7 +44,7 @@ export function Product({ photo, name, price, description }: ProductProps) {
           width={16}
           height={16}
         />
-        <span>COMPRAR</span>
+        <span onClick={hadleAddProduct}>COMPRAR</span>
       </BuyButton>
     </ProductContainer>
   );

@@ -2,16 +2,22 @@ import { AmountButtonContainer } from "./styles";
 
 interface AmountButtonProps {
   amount: number;
+  addProduct: () => void;
+  removeProduct: () => void;
 }
 
-export function AmountButton({ amount }: AmountButtonProps) {
+export function AmountButton({
+  amount,
+  addProduct,
+  removeProduct,
+}: AmountButtonProps) {
   return (
     <AmountButtonContainer>
       <span>Qtd:</span>
       <div>
-        <button>-</button>
+        <button onClick={removeProduct}>-</button>
         <span>{amount}</span>
-        <button>+</button>
+        <button onClick={addProduct}>+</button>
       </div>
     </AmountButtonContainer>
   );
