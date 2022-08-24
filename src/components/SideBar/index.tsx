@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useAppSelector, useAppDispatch } from "../../store/hooks";
+import { hideSideBar } from "../../store/cartSideBar/cartSideBarSlice";
+
 import { Product } from "./Product";
 import {
   Container,
@@ -29,15 +31,20 @@ const products = [
 ];
 
 export function SideBar() {
-  const [isVisible, setIsVisible] = useState(true);
+  const isVisible = useAppSelector((state) => state.sideBar.isVisible);
+  const dispatch = useAppDispatch();
+
+  function handleCloseSideBar() {
+    dispatch(hideSideBar());
+  }
 
   return (
     <>
-      {isVisible && <Overlay onClick={() => setIsVisible(false)} />}
+      {isVisible && <Overlay onClick={handleCloseSideBar} />}
       <Container isVisible={isVisible}>
         <Header>
           <span>Carrinho de Compras</span>
-          <button onClick={() => setIsVisible(false)} />
+          <button onClick={handleCloseSideBar} />
         </Header>
         <ProductsContent>
           {products.map((product) => (
