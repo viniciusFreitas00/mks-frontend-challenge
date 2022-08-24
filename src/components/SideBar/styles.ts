@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   overflow: auto;
