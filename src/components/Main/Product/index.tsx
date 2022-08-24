@@ -37,14 +37,14 @@ export function Product({ id, photo, name, price, description }: ProductProps) {
         <span>{description}</span>
       </ProductsInfoContent>
 
-      <BuyButton>
+      <BuyButton onClick={hadleAddProduct}>
         <Image
           src="/images/shopping-bag.png"
           alt="sacola de compra"
           width={16}
           height={16}
         />
-        <span onClick={hadleAddProduct}>COMPRAR</span>
+        <span>COMPRAR</span>
       </BuyButton>
     </ProductContainer>
   );

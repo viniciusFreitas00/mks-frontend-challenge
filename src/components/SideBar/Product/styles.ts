@@ -10,7 +10,7 @@ export const Card = styled.div`
   height: 95px;
 
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
   place-items: center;
   column-gap: 10px;
 

@@ -10,9 +10,9 @@ export const store = configureStore({
     cart: cartSliceReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
-  // middleware: (getDefaultMiddleware) => {
-  //   return getDefaultMiddleware().concat(apiSlice.middleware)
-  // }
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware().concat(apiSlice.middleware)
+  }
 });
 
 export type AppDispatch = typeof store.dispatch;
