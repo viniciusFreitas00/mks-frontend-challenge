@@ -26,7 +26,7 @@ export const Container = styled.div<ContainerProps>`
 
 export const Overlay = styled.div`
   z-index: 1;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
