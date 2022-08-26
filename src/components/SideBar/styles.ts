@@ -54,10 +54,6 @@ export const Header = styled.div`
     border-radius: 20px;
     font-size: 28px;
 
-    ::before {
-      content: "x";
-    }
-
     :hover {
       filter: brightness(0.8);
       transition: filter 0.2s;
