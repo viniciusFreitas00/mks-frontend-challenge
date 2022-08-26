@@ -39,7 +39,7 @@ export function SideBar() {
       <Container isVisible={isVisible}>
         <Header>
           <span>Carrinho de Compras</span>
-          <button onClick={handleCloseSideBar} />
+          <button onClick={handleCloseSideBar}>x</button>
         </Header>
         <ProductsContent>
           {products?.map((product) => (
@@ -57,7 +57,7 @@ export function SideBar() {
           <span>TOTAL</span>
           <span>R${total}</span>
         </TotalContent>
-        <Footer>Finalizar Comprar</Footer>
+        <Footer>Finalizar Compra</Footer>
       </Container>
     </>
   );
