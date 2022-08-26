@@ -24,7 +24,6 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addProduct(state, actions: PayloadAction<Products>) {
-      console.log("teste");
       const updatedCart = [...state.products];
 
       const productExists = updatedCart.find(
