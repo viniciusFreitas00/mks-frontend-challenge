@@ -46,10 +46,6 @@ describe("The Product component", () => {
 
     const state = store.getState().cart;
 
-    console.log(state.products[0])
-
     expect(state.products[0].id).toEqual(TEST_PRODUCTS.id)
-
-    // screen.logTestingPlaygroundURL();
   });
 });
