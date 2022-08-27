@@ -39,7 +39,7 @@ export function Product({ id, name, photo, price, amount }: ProductProps) {
 
   return (
     <Card>
-      <CloseButton onClick={handleRemoveAllProductsItens} />
+      <CloseButton onClick={handleRemoveAllProductsItens}>x</CloseButton>
       <Image
         src={photo}
         alt="imagem do produto"
