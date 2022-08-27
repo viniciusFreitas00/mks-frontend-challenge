@@ -39,10 +39,6 @@ export const CloseButton = styled.button`
   top: -10px;
   right: -10px;
 
-  ::before {
-    content: "x";
-  }
-
   :hover {
     filter: brightness(0.8);
     transition: filter 0.2s;
